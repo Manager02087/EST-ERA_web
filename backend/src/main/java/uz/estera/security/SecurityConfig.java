@@ -50,7 +50,13 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration cfg = new CorsConfiguration();
-        cfg.setAllowedOriginPatterns(List.of("https://*.est-era.uz", "https://est-era.uz", "http://localhost:*"));
+        cfg.setAllowedOriginPatterns(List.of(
+                "https://*.est-era.uz",
+                "https://est-era.uz",
+                "https://*.vercel.app",
+                "https://*.onrender.com",
+                "http://localhost:*"
+        ));
         cfg.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         cfg.setAllowedHeaders(List.of("*"));
         cfg.setAllowCredentials(true);
