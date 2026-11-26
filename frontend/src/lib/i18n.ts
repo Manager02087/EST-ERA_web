@@ -8,7 +8,7 @@ export const DICT: Record<Lang, Record<string, string>> = {
     navCatalog: 'Xizmatlar',
     navMasters: 'Ustalar',
     navAdmin: 'Admin (9 rol)',
-    navAuth: 'Kirish / Ro'yxatdan o'tish',
+    navAuth: "Kirish / Ro'yxatdan o'tish",
     orderBtn: 'Buyurtma berish',
   },
   ru: {
