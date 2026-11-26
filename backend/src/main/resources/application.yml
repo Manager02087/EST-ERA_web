@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: estera-api
+  servlet:
+    multipart:
+      max-file-size: 40MB
+      max-request-size: 45MB
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+estera:
+  jwt:
+    secret: ${JWT_SECRET:dev-only-change-me-in-production-at-least-64-characters-long-secret-key}
+    expiration-ms: 86400000
+  escrow:
+    platform-fee-percent: 2
+    max-proof-bytes: 41943040
+  payment:
+    mode: ${PAYMENT_MODE:TEST}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

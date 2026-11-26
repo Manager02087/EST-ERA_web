@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: est-era-api
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+      - key: SPRING_DATA_REDIS_HOST
+        sync: false
+      - key: SPRING_DATA_REDIS_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PAYMENT_MODE
+        value: TEST
