@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useState } from 'react';
 import { createPromo, getPublicMasters, MasterItem } from '@/lib/api';
 
-const DISTRICTS = ['all', 'Chilonzor', 'Yunusobod', 'Mirzo Ulug'bek', 'Yakkasaroy', 'Mirobod', 'Shayxontohur', 'Olmazor', 'Uchtepa', 'Sergeli', 'Yashnobod', 'Bektemir', 'Yangihayot'];
+const DISTRICTS = ['all', 'Chilonzor', 'Yunusobod', "Mirzo Ulug'bek", 'Yakkasaroy', 'Mirobod', 'Shayxontohur', 'Olmazor', 'Uchtepa', 'Sergeli', 'Yashnobod', 'Bektemir', 'Yangihayot'];
 
 export default function MastersPage() {
   const [masters, setMasters] = useState<MasterItem[]>([]);
