@@ -126,8 +126,7 @@ export default function OrdersWorkspacePage() {
                   <div className="flex flex-wrap gap-2 text-xs">
                     <button onClick={async () => { await confirmOrder(selected.id); setStatusMsg('Tasdiqlandi!'); loadOrders(); }} className="px-3 py-1.5 rounded-xl bg-emerald-500/20 text-emerald-300 font-bold">Ikki tomonlama tasdiqlash</button>
                     <button onClick={async () => { await grantSupportChat(selected.id); setStatusMsg('Supportga chat ruxsati berildi!'); }} className="px-3 py-1.5 rounded-xl bg-gold/15 text-gold font-bold">Supportga chat ruxsati</button>
-                    <button onClick={async () => { await openOrderDispute(selected.id, 'Sifat/vaqt bo'yicha murojaat'); setStatusMsg('Nizo ochildi (SUPPORT_L2)'); loadOrders(); }} className="px-3 py-1.5 rounded-xl bg-amber-500/20 text-amber-300 font-bold">Nizo ochish</button>
-                    <button onClick={async () => { await cancelOrder(selected.id); setStatusMsg('Bekor qilindi (GPS/Escrow qoidasi)'); loadOrders(); }} className="px-3 py-1.5 rounded-xl bg-rose-500/20 text-rose-300 font-bold">Bekor qilish</button>
+<button onClick={async () => { await openOrderDispute(selected.id, "Sifat/vaqt bo'yicha murojaat"); setStatusMsg('Nizo ochildi (SUPPORT_L2)'); loadOrders(); }} className="px-3 py-1.5 rounded-xl bg-amber-500/20 text-amber-300 font-bold">Nizo ochish</button>                    <button onClick={async () => { await cancelOrder(selected.id); setStatusMsg('Bekor qilindi (GPS/Escrow qoidasi)'); loadOrders(); }} className="px-3 py-1.5 rounded-xl bg-rose-500/20 text-rose-300 font-bold">Bekor qilish</button>
                   </div>
                 </div>
 
