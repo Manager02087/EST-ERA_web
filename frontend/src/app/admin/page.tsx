@@ -31,7 +31,7 @@ export default function AdminPage() {
     try {
       await updateSiteSetting('support_phone', phone, phone, phone);
       await updateSiteSetting('telegram_url', telegram, telegram, telegram);
-      setNotice('Aloqa ma'lumotlari bazada yangilandi!');
+      setNotice("Aloqa ma'lumotlari bazada yangilandi!");
     } catch (err) {
       setNotice(`Huquq yetarli emas (SUPER_ADMIN / S1 / S3): ${(err as Error).message}`);
     }
@@ -95,7 +95,7 @@ export default function AdminPage() {
                 <div className="text-gray-400 mt-0.5">{d.reason}</div>
               </div>
               <div className="flex gap-2">
-                <button onClick={async () => { await escalateDispute(d.id); setNotice('Yuqori pog'onaga oshirildi'); refresh(); }} className="px-3 py-1.5 rounded-xl bg-amber-500/20 text-amber-300 font-bold">Escalate (L2→L3→S3)</button>
+                <button onClick={async () => { await escalateDispute(d.id); setNotice("Yuqori pog'onaga oshirildi"); refresh(); }} className="px-3 py-1.5 rounded-xl bg-amber-500/20 text-amber-300 font-bold">Escalate (L2→L3→S3)</button>
                 <button onClick={async () => { await resolveDispute(d.id, 'RESOLVED_CLIENT', 'Mijoz foydasiga hal qilindi'); setNotice('Nizo yopildi'); refresh(); }} className="px-3 py-1.5 rounded-xl bg-emerald-500/20 text-emerald-300 font-bold">Mijozga qaytarish</button>
               </div>
             </div>
