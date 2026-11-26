@@ -4,7 +4,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'EST-ERA — 24/7 VIP Service Marketplace (UZ / RU / EN)',
-  description: 'Toshkent bo'ylab 20 ta xizmat, 3 bosqichli Escrow himoyasi va 24/7 uzluksiz web + mobil ekotizim.',
+  description: "Toshkent bo'ylab 20 ta xizmat, 3 bosqichli Escrow himoyasi va 24/7 uzluksiz web + mobil ekotizim.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
